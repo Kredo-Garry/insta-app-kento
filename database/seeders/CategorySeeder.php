@@ -27,12 +27,12 @@ class CategorySeeder extends Seeder
 
          $categories = [
             [
-                'name' => 'TestCategory1',
+                'name' => 'TestCategory111',
                 'created_at' => now(), //date & time
                 'updated_at' => now()
             ],
             [
-                'name' => 'TestCategory2',
+                'name' => 'TestCategory222',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
