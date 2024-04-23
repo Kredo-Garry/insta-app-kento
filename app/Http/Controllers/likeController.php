@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Like;
 
-class likeController extends Controller
+class LikeController extends Controller
 {
     private $like;
 
