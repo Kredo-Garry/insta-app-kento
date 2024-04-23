@@ -27,15 +27,20 @@ class CategorySeeder extends Seeder
 
          $categories = [
             [
-                'name' => 'TestCategory111',
+                'name' => 'Music',
                 'created_at' => now(), //date & time
                 'updated_at' => now()
             ],
             [
-                'name' => 'TestCategory222',
+                'name' => 'Travel',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'name' => 'Movie',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
             // [
             //     'name' => 'Programming',
             //     'created_at' => now(),
