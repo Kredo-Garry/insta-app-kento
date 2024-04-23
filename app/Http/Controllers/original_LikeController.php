@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Like;
 
 class LikeController extends Controller
 {
@@ -12,7 +12,7 @@ class LikeController extends Controller
 
     public function __construct(Like $like)
     {
-        $this->like = $like;
+        $this->like = $like; //initialize object
     }
 
     public function store($post_id)
@@ -22,15 +22,16 @@ class LikeController extends Controller
         $this->like->save();
 
         return redirect()->back();
+
     }
 
     public function destroy($post_id)
     {
         $this->like
-            ->where('user_id', Auth::user()->id)
-            ->where('post_id', $post_id)
-            ->delete();
+             ->where('user_id' , Auth::user()->id)
+             ->where('post_id' , $post_id)
+             ->delete();
 
-        return redirect()->back();
+             return redirect()->back();
     }
 }
