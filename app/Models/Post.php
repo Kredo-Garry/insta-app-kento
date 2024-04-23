@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Like;
 
 class Post extends Model
 {
@@ -27,7 +28,7 @@ class Post extends Model
     }
 
     public function likes(){
-        return $this->hasMany(like::class);
+        return $this->hasMany(Like::class);
     }
 
     #check fi the post been liked
