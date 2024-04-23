@@ -12,7 +12,7 @@ class LikeController extends Controller
 
     public function __construct(Like $like)
     {
-        $this->like = $like;
+        $this->like = $like; //initialize object
     }
 
     public function store($post_id)
