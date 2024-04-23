@@ -21,7 +21,7 @@ class AdminMiddleware
          * the Auth::check() is going to check if the user is logged-in, it will return true if the user is logged-in
          */
         if(Auth::check() && Auth::user()->role_id == User::ADMIN_ROLE_ID){
-            return $nex($request);
+            return $next($request);
         }
 
         return redirect()->route('index');
