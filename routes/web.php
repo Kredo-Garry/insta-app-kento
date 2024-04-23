@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
-//use App\Http\Controllers\LikeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\FollowController;
 
 # Admin user controller
@@ -74,7 +74,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 
     ### Like
-    Route::post('/like/{post_id}/store', [App\Http\Controllers\LikeController::class, 'store'])->name('like.store');
+    Route::post('/like/{post_id}/store', [LikeController::class, 'store'])->name('like.store');
     Route::delete('/like/{post_id}/destroy', [LikeController::class, 'destroy'])->name('like.destroy');
 
     ### FOllow/Unfollow
