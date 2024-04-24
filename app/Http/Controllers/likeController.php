@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
 
+
+# corrected the name of the controller
 class LikeController extends Controller
 {
     private $like;
